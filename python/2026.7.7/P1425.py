@@ -1,0 +1,11 @@
+s=input().split()
+h1=float(s[0])
+m1=float(s[1])
+h2=float(s[2])
+m2=float(s[3])
+tol1=h1*60+m1
+tol2=h2*60+m2
+tol=tol2-tol1
+e=int(tol%60)
+f=int(tol//60)
+print(f,e)

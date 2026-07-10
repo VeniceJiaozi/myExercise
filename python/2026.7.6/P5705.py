@@ -1,2 +1,2 @@
 flo=str(input())
-print(flo[::-1])
+print(float(flo[::-1]))

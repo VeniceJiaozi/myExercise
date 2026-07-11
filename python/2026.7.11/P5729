@@ -1,0 +1,16 @@
+w,x,h=map(int,input().split())
+q=int(input())
+s=[[[1 for i in range(h)]for i in range(x)]for i in range(w)]
+x1=y1=z1=x2=y2=z2=ans=0
+for i in range(q):
+    x1,y1,z1,x2,y2,z2=map(int,input().split())
+    for j in range(x1-1,x2):
+        for k in range(y1-1,y2):
+            for l in range(z1-1,z2):
+                s[j][k][l]=0
+for i in range(w):
+    for j in range(x):
+        for k in range(h):
+            if s[i][j][k]==1:
+                ans+=1
+print(ans)

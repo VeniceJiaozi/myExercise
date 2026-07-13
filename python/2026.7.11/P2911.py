@@ -5,6 +5,6 @@ for i in range(1,s1+1):
         for k in range(1,s3+1):
             ans[i+j+k]+=1
 for i in range(3,200):
-    if ans[i]>max:
+    if ans[i]>ans[max]:
         max=i
 print(max)

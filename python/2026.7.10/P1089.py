@@ -12,6 +12,6 @@ def main():
             cun+=100*((shou-yu)//100)
             shou-=100*((shou-yu)//100)
         shou-=yu
-    print(shou+cun*1.2)
+    print(int(shou+cun*1.2))
 
 main()

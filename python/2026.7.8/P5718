@@ -1,7 +1,7 @@
 n=int(input())
 s=input().split()
-ans=0x3f
-a=[0x3f]*n
+ans=0x3f3f3f3f
+a=[0x3f3f3f3f]*n
 for i in range(n):
     a[i]=int(s[i])
     if a[i]<=ans:

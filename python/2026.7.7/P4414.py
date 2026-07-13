@@ -9,8 +9,8 @@ for i in range(3):
             s[i],s[j]=s[j],s[i]
 for i in range(3):
     if shun[i]=="C":
-        print(s[0],end=' ')
+        print(s[2],end=' ')
     elif shun[i]=="B":
         print(s[1],end=' ')
     else:
-        print(s[2],end=' ')
+        print(s[0],end=' ')

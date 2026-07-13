@@ -2,7 +2,7 @@ n=int(input())
 i=2;a=b=0
 
 def zhi(x):
-    for i in range(2,int(n**0.5)):
+    for i in range(2,int(x**0.5)):
         if x%i==0 and x!=i:
             return 0
     return 1

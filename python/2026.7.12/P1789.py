@@ -1,5 +1,5 @@
 n,m,k=map(int,input().split())
-l=[[0 for i in range(n)]for i in range(n)]
+l=[[0 for i in range(n+10)]for i in range(n+10)]
 x=y=ans=0
 for i in range(m):
     x,y=map(int,input().split())

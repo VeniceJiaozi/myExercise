@@ -12,6 +12,8 @@ for i in range(2,s[2]+1):
     if c%i==0 and a%i==0:
         c/=i
         a/=i
+a=int(a)
+c=int(c)
 a=str(a)
 c=str(c)
 print(a+'/'+c)

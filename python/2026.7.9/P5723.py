@@ -11,4 +11,6 @@ for j in range(2,l): #输出
         if sum<=l:
             ans+=1
             print(j)
+        else:
+            break
 print(ans)

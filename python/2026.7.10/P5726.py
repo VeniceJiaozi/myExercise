@@ -1,6 +1,6 @@
 n=int(input())
 line=input().split()
-tol=min=ans=0;max=11
+tol=max=ans=0;min=11
 for i in range(n):
     tol+=int(line[i])
     if int(line[i])>max:

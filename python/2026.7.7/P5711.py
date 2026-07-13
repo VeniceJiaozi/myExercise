@@ -1,4 +1,4 @@
-n=input()
+n=int(input())
 ans=0
 if n%100==0:
     if n%400==0:

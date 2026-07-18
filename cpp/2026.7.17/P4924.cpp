@@ -10,13 +10,13 @@ void clockwise(int x,int y,int r){
     //关于副对称轴对称
     for(int i=max(1,x-r);i<=min(n,x+r);i++){
         for(int j=max(1,y-r);j<=min(n,y+r);j++){
-            hc[i][j]=l[x+y-j][x+y-i];
+            hc[i][j]=l[x+y-j][y+i-x];
         }        
     }
     //上下翻转
     for(int i=max(1,x-r);i<=min(n,x+r);i++){
         for(int j=max(1,y-r);j<=min(n,y+r);j++){
-            l[i][j]=hc[x*2-i][j];
+            l[i][j]=hc[i][j];
         }
     }
     return;
@@ -29,13 +29,13 @@ void anticlockwise(int x,int y,int r){
     //关于副对称轴对称
     for(int i=max(1,x-r);i<=min(n,x+r);i++){
         for(int j=max(1,y-r);j<=min(n,y+r);j++){
-            hc[i][j]=l[x+y-j][x+y-i];
+            hc[i][j]=l[x-y+j][x+y-i];
         }        
     }
     //左右翻转
     for(int i=max(1,x-r);i<=min(n,x+r);i++){
         for(int j=max(1,y-r);j<=y+r;j++){
-            l[i][j]=hc[i][x*2-j];
+            l[i][j]=hc[i][j];
         }
     }
 }

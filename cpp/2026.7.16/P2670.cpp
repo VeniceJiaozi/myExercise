@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-int n,m;bool lei[101][101];int ans[101][101];char x;
+int n,m;bool lei[102][102];int ans[102][102];char x;
 int main(){
     cin>>n>>m;
     for(int i=1;i<=n;i++){

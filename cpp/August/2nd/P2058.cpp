@@ -15,15 +15,15 @@ int main(){
         for(int j=0,x;j<k;j++){
             scanf("%d",&x);
             q.push({x,t});
-            if(num[x]==0){
+            num[x]++;
+            if(num[x]==1){
                 ans++;
-                num[x]++;
             }
         }
         for(a=q.front();q.size()&&a.t+86400<=t;q.pop(),a=q.front()){
-            if(num[a.x]==1){
+            num[a.x]--;
+            if(num[a.x]==0){
                 ans--;
-                num[a.x]--;
             }
         }
         printf("%d\n",ans);

@@ -41,8 +41,12 @@ int main(){
         sum+=cur;cur++;
     }
     int rem=n-sum;
-    for(int i=s.size()-1;i>=0&&rem>0;i--,rem--){
-        s[i]++;
+    int idx = s.size() - 1;
+    while (rem > 0) {
+        s[idx]++;
+        rem--;
+        idx--;
+        if (idx < 0) idx = s.size() - 1; // 回到末尾继续分配
     }
     string ans="1";
     for(int i=0;i<s.size();i++){

@@ -13,7 +13,7 @@ int main(){
     }
     for(int i=1;i<n;i++){
         if(!ans[i]){
-            printf("Not Jolly");
+            printf("Not jolly");
             return 0;
         }
     }

@@ -1,4 +1,4 @@
-import restaurant as restaurant
+import restaurant
 
 restaurant1 = restaurant.Reastaurant("老李家","川菜")
 restaurant2 = restaurant.Reastaurant("老王家","湘菜")

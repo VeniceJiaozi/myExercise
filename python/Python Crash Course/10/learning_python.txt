@@ -1,0 +1,3 @@
+i'm learning the python language now
+this is a trial of reading files by python
+hello python hello world

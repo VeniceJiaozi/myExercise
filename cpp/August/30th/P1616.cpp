@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-const int MAXN=10005;
+const int MAXN=1e7+5;
 long long dp[MAXN];
 int cost[MAXN],val[MAXN];
 int main(){

@@ -17,7 +17,7 @@ int main(){
         return 0;
     }
     for(int i=2;i<=r;i++){
-        for(int j=2;j<=i;j++){
+        for(int j=1;j<=i;j++){
             int curr=max(dp[i-1][j],dp[i-1][j-1]);
             dp[i][j]+=curr;
         }

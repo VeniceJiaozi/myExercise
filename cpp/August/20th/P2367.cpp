@@ -10,13 +10,13 @@ int main()
     cin>>n>>p;
     //输入
     long long prev=0,curr;
-    for(int i=0;i<n;i++){
+    for(int i=1;i<=n;i++){
         cin>>curr;
         d[i]=curr-prev;
         prev=curr;
     }
     //差分
-    for(int i=0;i<p;i++){
+    for(int i=1;i<=p;i++){
         long long l,r,z;
         cin>>l>>r>>z;
         d[l]+=z;
@@ -25,7 +25,7 @@ int main()
     //查询
     long long sum=0;
     long long min_val=1e18;
-    for(int i=0;i<n;i++){
+    for(int i=1;i<=n;i++){
         sum+=d[i];//sum即还原后的值
         min_val=min(min_val,sum);
     }

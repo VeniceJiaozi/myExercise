@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-const int MAXN=1e4+5;
+const int MAXN=1e5+5;
 int a[MAXN];
 long long sum[MAXN];
 int main(){
@@ -20,7 +20,8 @@ int main(){
     {
         int l,r;
         cin>>l>>r;
-        cout<<sum[r-1]-sum[l-2]<<endl;
+        if(l==1)cout<<sum[r-1]<<endl;
+        else cout<<sum[r-1]-sum[l-2]<<endl;
     }
     return 0;
 }

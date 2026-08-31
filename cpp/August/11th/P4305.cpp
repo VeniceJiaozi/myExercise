@@ -14,9 +14,9 @@ int main(){
             if(s.find(a[i])==s.end()){
                 s.insert(a[i]);
                 printf("%d ",a[i]);
-            }
-                
+            }   
         }
+        printf("\n");
     }
     return 0;
 }

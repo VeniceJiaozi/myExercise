@@ -63,7 +63,7 @@ int main(){
             flag=true;
         }
         else if(status==1&&!flag){
-            cout<<"Sorted sequence determined after "<<k<<" relations: "<<seq;
+            cout<<"Sorted sequence determined after "<<k<<" relations: "<<seq<<".";
             flag=true;
             //return 0;
         }

@@ -5,5 +5,5 @@ with open(file_name,'a') as file_object:
         user_name=input()
         if user_name=='0':
             break
-        print('hello'+user_name)
+        print('hello '+user_name)
         file_object.write(user_name+'\n')

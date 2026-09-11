@@ -4,7 +4,7 @@ int N;
 void print(int n){
     if(n==4){
         cout<<"oooo****--";
-        for(int i=0;i<NSIG-4;i++)
+        for(int i=0;i<N-4;i++)
             cout<<"o*";
         cout<<endl;
 

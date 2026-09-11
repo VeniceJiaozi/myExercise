@@ -46,7 +46,7 @@ int main(){
         }
     }
     for(vector<pair<int,int>>::iterator it=ans.begin();it!=ans.end();++it){
-        cout<<it->first<<" "<<it->second<<endl;
+        cout<<it->first<<" "<<it->second<<" ";
     }
     return 0;
 }

@@ -1,13 +1,15 @@
 #include<bits/stdc++.h>
 using namespace std;
-const int MAXN=2e5+5;
-long long n,m,s;
-long long w[MAXN],v[MAXN];
-long long l[MAXN],r[MAXN];
+const int MAXN=2e6+5;
+int n,m;
+long long s;
+int w[MAXN],v[MAXN];
+int l[MAXN],r[MAXN];
 long long y,ans=1e18;
-long long W,L,R;
-long long cnt[MAXN],sumv[MAXN];
-int check(long long W){
+int W,L,R;
+long long sumv[MAXN];
+int cnt[MAXN];
+long long check(long long W){
     long long sum1=0,sum2=0;
     memset(cnt,0,sizeof(cnt));
     memset(sumv,0,sizeof(sumv));
@@ -37,7 +39,7 @@ int main(){
         cin>>l[i]>>r[i];
     }
     while(L<=R){
-        W=(L+R)>>1;
+        W=L+R>>1;
         y=check(W);
         ans=min(ans,abs(s-y));
         if(y<s)

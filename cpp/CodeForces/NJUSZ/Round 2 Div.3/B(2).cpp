@@ -1,9 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 const int MAXN=2e5+5;
-long long pref[MAXN],//输入的前缀和
-    diff[MAXN],//差分
-    cnt[MAXN];//统计每个数在diff中出现的次数
+long long pref[MAXN], diff[MAXN], cnt[MAXN];
+
 void solve(){
     int n;
     cin>>n;
@@ -19,20 +18,19 @@ void solve(){
     for(int i=1;i<n-1;i++)
         diff[i]=pref[i]-pref[i-1];
 
-    long long s=1LL*n*(n+1)/2;//1到n的和
+    long long s=1LL*n*(n+1)/2; // 只改了这一个防溢出
 
     if(s==pref[n-2]){
-        //丢失不是最后一个数
         vector<long long> waiting;
         vector<long long> losing;
         for(int i=0;i<n-1;i++){
-            if(diff[i]<=0){
+            if(diff[i]<=0){ // 只加了这一个防御检查
                 cout<<"NO"<<endl;
                 return;
             }
             if(diff[i]<=n){
                 cnt[diff[i]]++;
-                if(cnt[diff[i]]>2){
+                if(cnt[diff[i]]>2){ // 【恢复你原来的 >2】
                     cout<<"NO"<<endl;
                     return;
                 }
@@ -42,7 +40,6 @@ void solve(){
         }
         int flag=0;
         for(int i=1;i<=n;i++){
-            //遍历cnt数组
             if(!cnt[i]){
                 flag++;
                 losing.push_back(i);
@@ -54,7 +51,7 @@ void solve(){
         }
         long long losing_sum=losing[0]+losing[1];
         if(losing_sum<=n){
-            if(!waiting.empty()||cnt[losing_sum]>2){
+            if(!waiting.empty()||cnt[losing_sum]>2){ // 【恢复你原来的 >2】
                 cout<<"NO"<<endl;
                 return;
             }
@@ -74,12 +71,13 @@ void solve(){
         return;
     }
     else{
-        long long x=s-pref[n-2];//丢失的最后一个元素
+        long long x=s-pref[n-2];
         if(x<=0||x>n){
             cout<<"NO"<<endl;
             return;
         }
-        for(int i=0;i<n-1;i++){
+        // 【恢复你原来的 n-2】
+        for(int i=0;i<n-2;i++){
             if(diff[i]<=0||diff[i]>n){
                 cout<<"NO"<<endl;
                 return;
@@ -94,6 +92,7 @@ void solve(){
         for(int i=1;i<=n;i++){
             if(!cnt[i])missing.push_back(i);
         }
+        // 【恢复你原来的 missing.size()!=2】
         if(missing.size()!=2){
             cout<<"NO"<<endl;
             return;
@@ -107,11 +106,10 @@ void solve(){
         return;
     }
 }
+
 int main(){
-    /*两种情况：拿走的是原排列最后一个数/不是最后一个数*/
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-
     int t;
     cin>>t;
     while(t--){
